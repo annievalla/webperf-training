@@ -3408,20 +3408,12 @@
 				Press the space key then arrow keys to make a selection.
 			</li>
 		</ul>
-		<script>
-			if ('loading' in HTMLImageElement.prototype) {
-				const images = document.querySelectorAll("img.lazyload");
-				images.forEach(img => {
-					img.src = img.dataset.src;
-				});
-			} else {
-				// Dynamically import the LazySizes library
-			  let script = document.createElement("script");
-			  script.async = true;
-			  script.src =
-				"https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js";
-			  document.body.appendChild(script);
-			}
-		</script>
 	</body>
+	<script>
+		let script = document.createElement("script");
+		script.async = true;
+		script.src =
+		  "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js";
+		document.body.appendChild(script);
+  </script>
 </html>
